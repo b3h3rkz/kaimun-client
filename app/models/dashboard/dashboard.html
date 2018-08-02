@@ -1,10 +1,11 @@
 <div class="row row-xs">
-
 <div class="col-sm-12">
-
-  <div class="alert alert-info">
-    A service that allows you to send money to bank and mobile money accounts in Ghana and Nigeria.
+  <div class="alert indigo">
+    <h4> Kaimun allows you to instantly send money to bank and mobile money accounts in Ghana and Nigeria.</h4>
   </div>
+  <div class="alert alert-success" ng-if="successFulTx">
+         Last transaction was successful
+      </div>
   <div class="col-md-4">
       <ul class="list-group md-whiteframe-z0">
           <li class="list-group-item" ng-class="{'bg-dark':selectedCountry  == true}" ng-repeat="country in countries" ng-click="selectCountry(country)">
@@ -23,7 +24,7 @@
   <div class="col-lg-4 col-md-4 col-sm-12">
     <div class="card" ng-if="step1" >
         <div class="card-heading">
-            
+            {{selectedCountry}}
         </div>
         <div class="card-body">
             <form ng-submit="resolveAccount()">
@@ -56,7 +57,7 @@
 
                     <div class="col-sm-12" ng-if="account_name">
                         <div class="md-form-group float-label">
-                            <textarea class="md-input"  ng-model="postData.narration"></textarea>
+                            <textarea class="md-input"  ng-model="postData.narration" required></textarea>
                             <label>Note</label>
                         </div>
                     </div>

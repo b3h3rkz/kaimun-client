@@ -9,7 +9,7 @@ app.controller('DashCtrl', ['$scope',
 'Request', 
 '$localStorage', 
 'Utill',
-'Modal',function($scope, $stateParams, $window, $state, $http,  $timeout,$rootScope, UserService,  Request,  $localStorage,  Utill,Modal,) { 
+function($scope, $stateParams, $window, $state, $http,  $timeout,$rootScope, UserService,  Request,  $localStorage,  Utill) { 
         $scope.postData = {};
         $scope.errors = [];
         $rootScope.user = UserService.getCurrentUser();
@@ -17,7 +17,6 @@ app.controller('DashCtrl', ['$scope',
         $scope.step2 = false;
         $scope.step1 = false;
         $scope.showRavePayButton = false;
-
         $scope.toggleStep2 = function(){
              $scope.step2 = true;
              $scope.step1 = false;
@@ -44,8 +43,6 @@ app.controller('DashCtrl', ['$scope',
                 $scope.getBanks(country.iso_code);
                 $scope.step1 = true;
                 $scope.step2 = false;
-
-                // $scope.selectedCountry = country;
         }
 
         $scope.getBanks = function(country){
@@ -79,9 +76,7 @@ app.controller('DashCtrl', ['$scope',
 
         $scope.sendDepositRequest = ()=>{
                 Utill.startLoader()
-                // $scope.postData.country = user.country.iso_code;
                 $scope.postData.currency = $scope.currency_code;
-                // $scope.postData.phone = user.phone;
                 Request.post('transactions/ravepayment_request/', $scope.postData).then((res)=>{
                     Utill.endLoader()
                     $scope.showRavePayButton = true;  
@@ -112,19 +107,22 @@ app.controller('DashCtrl', ['$scope',
                 $scope.postData.amount = $scope.amount;
                 Request.post('transactions/ravepay_deposit/', $scope.postData).then((res)=>{
                     $scope.successFulTx = true;
+                    $scope.step1 = false;
+                    $scope.step2 = false;
+                    $scope.postData = null;
                     $timeout(function() {
                         $scope.getUser();
                         Utill.showSuccess('Transaction Completed!!!')
-                     }, 2000);
-        
+                     }, 4000);
+                }, (err)=>{
+                    Utill.endLoader();
+                    Utill.showError("Something went wrong");
                 })
             };
-
-            $scope.reset() =  function(){
-                $scope.step1 = false;
-                $scope.step2 = false;
-            }
-
+        //     $scope.reset() =  function(){
+        //         $scope.step1 = false;
+        //         $scope.step2 = false;
+        //     }
         //     0690000031
         
 }])

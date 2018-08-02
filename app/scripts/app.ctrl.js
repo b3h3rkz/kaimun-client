@@ -27,8 +27,7 @@ angular.module('app')
   '$mdSidenav', 
   '$mdColorPalette', 
   '$anchorScroll', 
-  'PriceApiRequest',
-    function ($scope, Utill, $state, $translate, $localStorage, UserService, Request, $window, $document, $location, $rootScope, $timeout, $http, $interval, Idle, $mdSidenav, $mdColorPalette, $anchorScroll, PriceApiRequest) {
+    function ($scope, Utill, $state, $translate, $localStorage, UserService, Request, $window, $document, $location, $rootScope, $timeout, $http, $interval, Idle, $mdSidenav, $mdColorPalette, $anchorScroll) {
       // add 'ie' classes to html
       var isIE = !!navigator.userAgent.match(/MSIE/i) || !!navigator.userAgent.match(/Trident.*rv:11\./);
       isIE && angular.element($window.document.body).addClass('ie');
@@ -75,15 +74,6 @@ angular.module('app')
         $rootScope.logout();
 
       });
-
-
-      // $scope.$on('IdleWarn', function(e, countdown) {
-      //     // follows after the IdleStart event, but includes a countdown until the user is considered timed out
-      //     // the countdown arg is the number of seconds remaining until then.
-      //     // you can change the title or display a warning dialog from here.
-      //     // you can let them resume their session by calling Idle.watch()
-      // });
-
       $rootScope.user = UserService.getCurrentUser();
 
       $rootScope.logout = function(){
