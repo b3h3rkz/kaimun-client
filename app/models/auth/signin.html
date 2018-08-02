@@ -1,0 +1,41 @@
+  <div class="center-block w-xxl w-auto-xs p-v-md"  id="particles-js" >
+    <div class="navbar">
+      <div class="navbar-brand m-t-lg text-center" >
+        <span class="m-l inline">{{app.name}}</span>
+      </div>
+    </div>
+
+    <div class="p-lg panel md-whiteframe-z1 text-color m">
+      <div class="m-b text-sm">
+        Login with your {{app.name}} Account  
+      </div>
+      <div class="alert alert-danger" ng-repeat="error in errors.non_field_errors">{{error}}</div>
+      <form name="form" ng-submit="login()">
+        <div class="md-form-group float-label">
+          <input type="email" class="md-input" ng-model="loginData.email" required>
+          <label>Email</label>
+        </div>
+        <div class="md-form-group float-label">
+          <input type="password" class="md-input" ng-model="loginData.password" required>
+          <label>Password</label>
+        </div>
+        <!-- <div class="g-recaptcha" data-sitekey="6Lc41zkUAAAAADX01qsmCMr6XbFOABqFdCT8G3ys"></div>         -->
+        <button md-ink-ripple type="submit" class="md-btn md-raised indigo btn-block p-h-md" ng-if="!showLoader">Login</button>
+          <md-progress-linear md-mode="indeterminate" class="m-b" ng-if="showLoader" ></md-progress-linear>
+      </form>
+    </div>
+
+    <div class="p-v-lg text-center">
+      <div class="m-b"><button ui-sref="access.forgot-password" class="md-btn">Forgot password?</button></div>
+      <div>Do not have an account? <button ui-sref="access.signup" class="md-btn">Create an account</button></div>
+    </div>
+  </div>
+
+
+  <script>
+      /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+      particlesJS.load('particles-js', 'scripts/particlesjs-config.json', function() {
+          console.log('callback - particles.js config loaded');
+      });
+  </script>
+

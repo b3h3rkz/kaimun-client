@@ -1,0 +1,4 @@
+node_modules
+.idea/workspace.xml
+env.js
+bower_components

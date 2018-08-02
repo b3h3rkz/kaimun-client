@@ -1,0 +1,50 @@
+<div class="center-block w-xxl w-auto-xs p-v-md">
+    <div class="navbar">
+        <div class="navbar-brand m-t-lg text-center">
+
+            <span class="m-l inline">{{app.name}}</span>
+        </div>
+    </div>
+
+    <div class="p-lg panel md-whiteframe-z1 text-color ">
+        <div class="m-b text-sm">
+            Sign up for <strong>{{app.name}}</strong> Account
+        </div>
+        <div class="alert alert-danger" ng-repeat="error in errors.non_field_errors">{{error}}</div>
+        <form name="form" ng-submit="signup()">
+            <div class="form-group">
+                <div class="alert alert-danger" ng-repeat="error in errors.first_name">{{error}}</div>
+                <input type="text" class="form-control" ng-model="postData.first_name" required placeholder="First Name">
+            </div>
+
+            <div class="form-group">
+                <div class="alert alert-danger" ng-repeat="error in errors.last_name">{{error}}</div>
+                <input type="text" class="form-control" ng-model="postData.last_name" required placeholder="Last Name">
+            </div>
+
+            <div class="form-group">
+                <div class="alert alert-danger" ng-repeat="error in errors.email">{{error}}</div>
+                <input type="email" class="form-control" ng-model="postData.email" required placeholder="Email">
+            </div>
+     
+
+            <div class="form-group">
+                <div class="alert alert-danger" ng-repeat="error in errors.password1">{{error}}</div>
+                <input type="password" class="form-control" ng-model="postData.password1" required placeholder="Password">
+            </div>
+
+            <!-- <div class="g-recaptcha" data-sitekey="6Lc41zkUAAAAADX01qsmCMr6XbFOABqFdCT8G3ys"></div>         -->
+
+            <div class="form-check">
+                <label class="form-check-label">
+                  <input type="checkbox" ng-model="agree" required><i class="indigo"></i> I Agree to Follow  <a href="https://bitnob.com/privacy">Terms and Privacy Policy</a>
+                </label>
+            </div>
+            <button md-ink-ripple type="submit" class="md-btn md-raised bg-dark btn-block p-h-md" ng-if="!showLoader">Sign up</button>
+            <md-progress-linear md-mode="indeterminate" class="m-b" ng-if="showLoader"></md-progress-linear>
+        </form>
+        <div class="text-center">Already have an account? <button ui-sref="access.signin" class="md-btn">Sign in</button></div>
+    </div>
+
+
+</div>

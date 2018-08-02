@@ -1,0 +1,24 @@
+<div class="box">
+  <div class="navbar md-whiteframe-z1 no-radius indigo" ng-class="$state.current.data.theme ? $state.current.data.theme.primary : app.setting.theme.primary">
+      <!-- brand -->
+      <a class="navbar-brand">
+        <img src="" alt="." style="max-height: 36px; display:none">
+        <span class="hidden-folded m-l inline">{{app.name}}</span>
+      </a>
+      <!-- / brand -->
+  </div>
+  <div class="box-row">
+    <div class="box-cell scrollable hover">
+      <div class="box-inner bg-white">
+        <div id="nav" ng-include="'views/partials/aside.nav.uikit.html'"></div>
+        <div id="account" class="hide m-v-xs">
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav>
+    <ul class="nav b-t b ">
+
+    </ul>
+  </nav>
+</div>

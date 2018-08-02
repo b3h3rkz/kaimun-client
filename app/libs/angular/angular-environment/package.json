@@ -1,0 +1,72 @@
+{
+  "_from": "angular-environment@^1.0.8",
+  "_id": "angular-environment@1.0.8",
+  "_inBundle": false,
+  "_integrity": "sha1-yBheuHY+bvCHeroZsnMGmdG5UlE=",
+  "_location": "/angular-environment",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "angular-environment@^1.0.8",
+    "name": "angular-environment",
+    "escapedName": "angular-environment",
+    "rawSpec": "^1.0.8",
+    "saveSpec": null,
+    "fetchSpec": "^1.0.8"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/angular-environment/-/angular-environment-1.0.8.tgz",
+  "_shasum": "c8185eb8763e6ef0877aba19b2730699d1b95251",
+  "_spec": "angular-environment@^1.0.8",
+  "_where": "/Users/kwabena/PhpstormProjects/bitnob-client",
+  "author": {
+    "name": "juanpablob",
+    "email": "m.juanpablob@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/juanpablob/angular-environment/issues"
+  },
+  "bundleDependencies": false,
+  "contributors": [
+    {
+      "name": "questchile",
+      "email": "questchile@gmail.com"
+    },
+    {
+      "name": "nirarazi",
+      "email": "nir.arazi@gmail.com"
+    }
+  ],
+  "deprecated": false,
+  "description": "AngujarJS Environment Plugin",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-jshint": "^1.11.2",
+    "gulp-jsmin": "^0.1.5",
+    "gulp-load-plugins": "^0.10.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-util": "^3.0.6",
+    "gulp-watch": "^4.3.3",
+    "yargs": "^3.15.0"
+  },
+  "homepage": "https://github.com/juanpablob/angular-environment#readme",
+  "keywords": [
+    "angular",
+    "angularjs",
+    "environment",
+    "env"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "angular-environment",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juanpablob/angular-environment.git"
+  },
+  "version": "1.0.8"
+}

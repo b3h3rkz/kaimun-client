@@ -1,0 +1,22 @@
+<div class="center-block w-xxl w-auto-xs p-v-md"  id="particles-js" >
+    <div class="navbar">
+        <div class="navbar-brand m-t-lg text-center" >
+            <span class="m-l inline">{{app.name}}</span>
+        </div>
+    </div>
+
+    <div class="p-lg panel md-whiteframe-z1 text-color m">
+        <div class="m-b text-sm">
+            Thank you for signin up with {{app.name}}. Please check your email address to confirm your account
+        </div>
+    </div>
+</div>
+
+
+<script>
+    /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+    particlesJS.load('particles-js', 'scripts/particlesjs-config.json', function() {
+        console.log('callback - particles.js config loaded');
+    });
+</script>
+
