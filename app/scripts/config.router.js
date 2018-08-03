@@ -107,7 +107,7 @@ angular
         .state('app.dashboard', {
           url: '/dashboard',
           templateUrl: 'models/dashboard/dashboard.html',
-          data: { title: 'Kaimun', folded: true, requiredLogin: true, reload: true},
+          data: { title: 'Kaimun App', folded: true, requiredLogin: true, reload: true},
           controller: 'DashCtrl',
           resolve: load(['scripts/controllers/chart.js', 'scripts/controllers/vectormap.js'])
         })

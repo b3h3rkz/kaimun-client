@@ -32,13 +32,13 @@
                 <div class="alert alert-danger" ng-repeat="error in errors.password1">{{error}}</div>
                 <input type="password" class="form-control" ng-model="postData.password1" required placeholder="Password">
             </div>
-            
+
             <div class="form-check">
                 <label class="form-check-label">
                   <input type="checkbox" ng-model="agree" required><i class="indigo"></i> I Agree to Follow  <a href="https://bitnob.com/privacy">Terms and Privacy Policy</a>
                 </label>
             </div>
-            <button md-ink-ripple type="submit" class="md-btn md-raised bg-dark btn-block p-h-md" ng-if="!showLoader">Sign up</button>
+            <!-- <button md-ink-ripple type="submit" class="md-btn md-raised bg-dark btn-block p-h-md" ng-if="!showLoader">Sign up</button> -->
             <md-progress-linear md-mode="indeterminate" class="m-b" ng-if="showLoader"></md-progress-linear>
         </form>
         <div class="text-center">Already have an account? <button ui-sref="access.signin" class="md-btn">Sign in</button></div>

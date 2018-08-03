@@ -14,6 +14,8 @@ app.controller('LoginCtrl', function($scope, Request, $window, $timeout, $state,
     $scope.login = function() {
         Utill.startLoader()
 
+        $scope.postData.email = "demo@kaimun.com";
+        $scope.postData.password = "demopassword";
         Request.post('rest-auth/login/', $scope.loginData).then(function(res) {
 
             Utill.endLoader();
