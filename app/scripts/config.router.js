@@ -212,8 +212,8 @@ angular
       },
       vars: {
         development: {
-          // apiUrl: 'https://api.kaimun.com/api/v1/',
-          apiUrl: 'http://localhost:8000/api/v1/',
+          apiUrl: 'https://api.kaimun.com/api/v1/',
+          // apiUrl: 'http://localhost:8000/api/v1/',
         },
         production: {
           apiUrl: 'https://api.kaimun.com/api/v1/',
